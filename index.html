@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Vacation Agency</title>
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <nav class="nav translate" data-speed="-0.99" id="navID">
+            <div class="nav__inner">
+            <h2 class="nav__logo">Vacation <br> Agency <span class="nav__dot">.</span></h2>
+            
+            <div class="nav__links">
+                <a href="#"  class="nav__link">главная</a>
+                <a href="#dotsID" class="nav__link">точки</a>
+                <a href="#" onclick="myFunction()" class="nav__link">команда</a>
+                <a href="#" class="nav__link">CHR</a>
+            </div>
+        </div>
+        </nav>
+        <h1 class="header__title translate" >Жажда<br>открытий</h1>
+    </div>
+        <img src="images/mountain1.png" alt="" class="mountain1 translate" data-speed="-0.5">
+        <img src="images/mountain2.png" alt="" class="mountain2 translate" data-speed="-0.5">
+        <img src="images/mountain3.png" alt="" class="mountain3 translate" data-speed="-0.25">
+        <div class="shadow" data-speed="1"></div>        
+    </header>
+
+    
+
+    <section class="dots" id="dotsID">
+        <div class="container">
+        <h2 class="dots__title">Точки :</h2>
+        <nav class="dots__filter">
+            <div class="filter__inner" id="myBtnContainer">
+                <a class="filter__link filter-active" onclick="filterSelection('all')" >Все точки</a>
+                <a class="filter__link" onclick="filterSelection('concert')">Концертные залы</a>
+                <a class="filter__link" onclick="filterSelection('monument')">Памятники</a>
+                <a class="filter__link" onclick="filterSelection('museum')">Музеи</a>
+                <a class="filter__link" onclick="filterSelection('theatre')">Театры</a>
+                <a class="filter__link" onclick="filterSelection('parks')">Парки</a>
+            </div>
+        </nav>
+        <div class="dots__grid">
+
+            <a data-modal="modal1" class="grid__img grozny wide" style="background: url(assets/1.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-blue"> 
+                    <div class="img__title"><div class="title__address">пр. имени Ахмат-Хаджи Кадырова</div>Мечеть "Сердце Чечни" имени Ахмата Кадырова</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal2" class="grid__img museum monument" style="background: url(assets/2.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-green"> 
+                    <div class="img__title"><div class="title__address">ул. Маяковского, 9 В</div>Музей Ахмат-Хаджи Кадырова</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal3" class="grid__img monument" style="background: url(assets/3.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-red"> 
+                    <div class="img__title"><div class="title__address">пр. Путина, 2</div>Памятник борцам революции</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal4" class="grid__img theatre" style="background: url(assets/4.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-purple"> 
+                    <div class="img__title"><div class="title__address">пр. имени Ахмат-Хаджи Кадырова</div>Театр им. Ханпаши Нурадилова</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal5" class="grid__img tall concert" style="background: url(assets/5.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-green"> 
+                    <div class="img__title inner-tall"><div class="title__address">ул. Чехова, 4</div>Филармония имени А. Шахбулатова</div>
+                    <div class="button__inner inner-tall">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal6" class="grid__img theatre monument" style="background: url(assets/6.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-blue"> 
+                    <div class="img__title"><div class="title__address">пр. Мохаммеда Али, 19</div>Театр им М. Лермонтова</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal7" class="grid__img grozny wide" style="background: url(assets/7.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-blue"> 
+                    <div class="img__title"><div class="title__address">ул. Г.А, ул. Германа Угрюмова, 75</div>Национальная библиотека Чеченской Республики им. А.А. Айдамирова</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a data-modal="modal8" class="grid__img museum" style="background: url(assets/8.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-red"> 
+                    <div class="img__title"><div class="title__address">пр. Путина, 1б</div>Национальный музей</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a class="grid__img concert" style="background: url(assets/9.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-green"> 
+                    <div class="img__title"><div class="title__address">Театральная площадь, 1/75</div>Театрально-концертный зал</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a class="grid__img parks tall" style="background: url(assets/10.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-green"> 
+                    <div class="img__title inner-tall"><div class="title__address">ул. Пролетарская 1а</div>Цветочный парк</div>
+                    <div class="button__inner inner-tall">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a class="grid__img parks" style="background: url(assets/11.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-blue"> 
+                    <div class="img__title"><div class="title__address">Театральная площадь, 1/75</div>Сквер журналистов</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+            <a class="grid__img parks" style="background: url(assets/12.png) no-repeat center center / cover;">
+                <div class="img__overlay overlay-red"> 
+                    <div class="img__title"><div class="title__address">8-я Линия ул, 10</div>Парк имени Кадырова А.А</div>
+                    <div class="button__inner inner-short">
+                    <button class="title__link">Карты</button>
+                    <button class="title__link">Тур 360</button>
+                </div>
+                </div>
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <div class="modal-holder" id="modal1">
+        <div class="modal">
+        <a  class="modal__close">✖</a>
+        <div class="modal-content__inner">
+        <div class="modal__map">
+        
+            <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo252ho0zqk14pd05nyd0n1.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#16.74/43.317784/45.693962/0/37" title="Basic" style="border:none;"></iframe>
+        
+        </div>
+       
+        <div class="modal__info">
+            <h3 class="info__title">Сердце Чечни</h3>
+            <p class="info__subtitle">Мечеть «Сердце Чечни» имени Ахмата Кадырова — мечеть в центре Грозного, одна из крупнейших в России и Европе. Строительство мечети было начато в апреле 2006 года и закончилось в октябре 2008 года</p>
+            <div class="button__inner">
+            <form action="https://www.google.com/maps/place/%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5+%D0%A7%D0%B5%D1%87%D0%BD%D0%B8/@43.3177125,45.6917396,17z/data=!3m1!4b1!4m5!3m4!1s0x4051d3e41e4f142d:0xb7b96b83453e05!8m2!3d43.3177086!4d45.6939283">
+                <button class="title__link">Карты</button>
+            </form>
+            <form action="https://www.google.com/maps/@43.3180869,45.6940989,3a,75y,195.02h,105.01t/data=!3m8!1e1!3m6!1sAF1QipMA2cjBEj_UMafdW_l8FJ_VcHG4ZqncUSYdtlpk!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMA2cjBEj_UMafdW_l8FJ_VcHG4ZqncUSYdtlpk%3Dw203-h100-k-no-pi-0-ya139.27158-ro-0-fo100!7i9728!8i4860?">
+                <button class="title__link">Тур 360</button>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="modal-holder" id="modal2">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+            <div class="modal__map">
+            
+                <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo5mcb8duoc15o8l0ew86pa.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#16.45/43.326151/45.678809/0/52" title="Basic" style="border:none;"></iframe>
+            
+            </div>
+           
+            <div class="modal__info">
+            <h3 class="info__title">Музей Ахмат-Хаджи Кадырова</h3>
+            <p class="info__subtitle">Мемориальный комплекс Славы имени Ахмата Абдулхамидовича Кадырова — мемориал, посвящённый Победе в Великой Отечественной войне, а также первому Президенту Чеченской Республики Ахмату Кадырову. Комплекс расположен в центре города Грозного на улице Маяковского. В составе мемориала — музей, парк, ряд памятников.</p>
+            <div class="button__inner">
+            <form action="https://www.google.com/maps/place/%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81+%D0%A1%D0%BB%D0%B0%D0%B2%D1%8B+%D0%B8%D0%BC.+%D0%90.%D0%90.%D0%9A%D0%B0%D0%B4%D1%8B%D1%80%D0%BE%D0%B2%D0%B0/@43.3263074,45.6767002,17z/data=!3m1!4b1!4m5!3m4!1s0x4051d3da19657089:0x1d2d2f0cddd87f92!8m2!3d43.3261821!4d45.6791256">
+                <button class="title__link">Карты</button>
+            </form>
+            <form action="https://www.google.com/maps/@43.3269785,45.6795263,3a,75y,222.01h,99.83t/data=!3m8!1e1!3m6!1sAF1QipPWHZYXKyqQJeVhvgRRH7BoZiBfIzGLPbC5-41b!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPWHZYXKyqQJeVhvgRRH7BoZiBfIzGLPbC5-41b%3Dw203-h100-k-no-pi-0-ya271.94598-ro0-fo100!7i6144!8i3072">
+                <button class="title__link">Тур 360</button>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="modal-holder" id="modal3">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+            <div class="modal__map">
+            
+                <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo5xsuq13n214qw610uahvw.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#17.76/43.323894/45.678686/11.2/67" title="Basic" style="border:none;"></iframe>            
+            
+            </div>
+           
+            <div class="modal__info">
+            <h3 class="info__title">Памятник борцам революции</h3>
+            <p class="info__subtitle">Монумент расположен в городе Грозном на площади Дружбы Народов. Памятник трёхфигурный. Фигуры выполнены в полный рост из блоков серого гранита Корнинского месторождения (Житомирская область, Украинская ССР, СССР). От грудной области и далее вниз фигуры слиты и не детализированы.</p>
+            <div class="button__inner">
+            <form action="https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%94%D1%80%D1%83%D0%B6%D0%B1%D1%8B+%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BE%D0%B2/@43.3181061,45.6875328,15z/data=!4m9!1m2!2m1!1z0J_QsNC80Y_RgtC90LjQuiDQsdC-0YDRhtCw0Lwg0YDQtdCy0L7Qu9GO0YbQuNC4!3m5!1s0x4051d3dbb3b4f6b9:0xf212aa7a345522c4!8m2!3d43.3245501!4d45.6793673!15sCjDQn9Cw0LzRj9GC0L3QuNC6INCx0L7RgNGG0LDQvCDRgNC10LLQvtC70Y7RhtC40LhaMiIw0L_QsNC80Y_RgtC90LjQuiDQsdC-0YDRhtCw0Lwg0YDQtdCy0L7Qu9GO0YbQuNC4kgETaGlzdG9yaWNhbF9sYW5kbWFya5oBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOUmRVOXRXV0ZCRUFF?">
+                <button class="title__link">Карты</button>
+            </form>
+            <form action="https://www.google.com/maps/@43.3246608,45.679673,3a,43.4y,242.46h,94.43t/data=!3m7!1e1!3m5!1shWlNavSDgtdsrRmlYWdzBg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DhWlNavSDgtdsrRmlYWdzBg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D339.7795%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?">
+                <button class="title__link">Тур 360</button>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="modal-holder" id="modal4">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+            <div class="modal__map">
+            
+                <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo6nllpoup814o8pia9q8j2.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#17.85/43.320664/45.689531/0/54" title="Basic" style="border:none;"></iframe>
+            
+            </div>
+           
+            <div class="modal__info">
+            <h3 class="info__title">Театр им. Ханпаши Нурадилова</h3>
+            <p class="info__subtitle">Чеченский государственный драматический театр им. Ханпаши Нурадилова официально открылся 1 мая 1931 года как театральная студия. На деле работать он начал несколько раньше. Основателем и первым директором театра был Абдурахман Авторханов</p>
+            <div class="button__inner">
+            <form action="https://www.google.com/maps/place/%D0%A7%D0%B5%D1%87%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%B4%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D1%82%D0%B5%D0%B0%D1%82%D1%80+%D0%B8%D0%BC.+%D0%A5%D0%B0%D0%BD%D0%BF%D0%B0%D1%88%D0%B8+%D0%9D%D1%83%D1%80%D0%B0%D0%B4%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0/@43.3208939,45.6872383,17z/data=!3m1!4b1!4m5!3m4!1s0x4051d3e751bb1795:0x2033fb422905f3c3!8m2!3d43.3209566!4d45.6892726?">
+                <button class="title__link">Карты</button>
+            </form>
+            <form action="https://www.google.com/maps/@43.3210078,45.6891889,3a,75y,193.27h,104.52t/data=!3m8!1e1!3m6!1sAF1QipOIxQReSw4v_TKWhqdkoNGyaxB85emBBJ12QQA8!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOIxQReSw4v_TKWhqdkoNGyaxB85emBBJ12QQA8%3Dw203-h100-k-no-pi-0-ya199.10419-ro-0-fo100!7i9728!8i4864?">
+                <button class="title__link">Тур 360</button>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="modal-holder" id="modal5">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+            <div class="modal__map">
+            
+            <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo78b7k68il14pfzlm8zc7d.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#18.17/43.319803/45.697923/-121.6/69" title="Basic" style="border:none;"></iframe>
+            
+            </div>
+           
+            <div class="modal__info">
+            <h3 class="info__title">Филармония имени А. Шахбулатова</h3>
+            <p class="info__subtitle">Филармония внесла огромный вклад в развитие музыкальной культуры республики. Целый ряд советских композиторов создавал произведения на основе чечено-ингушского фольклора: «Чеченская сюита» А. А. Давиденко, «Джигитовка» М. В. Коваля, «Сюита для струнного квартета на чечено-ингушские темы» и «Чечено-Ингушская мелодия» Н. С. Речменского, поэма Умара Бексултанова «Легенда гор».</p>
+            <div class="button__inner">
+            <button class="title__link link-margin--right">Карты</button>
+            <button class="title__link link-margin--right">Тур 360</button> 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="modal-holder" id="modal6">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+            <div class="modal__map">
+            
+            <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo7p0bs2bf014mmq6btr1bn.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#17.67/43.319459/45.721148/114.7/69" title="Basic" style="border:none;"></iframe>            
+            </div>
+           
+            <div class="modal__info">
+            <h3 class="info__title">Театр им М. Лермонтова</h3>
+            <p class="info__subtitle">Государственный русский драматический театр имени Михаила Юрьевича Лермонтова — основанный в 1904 году республиканский театр, расположенный в Грозном. У истоков создания театра стоял такой известный мастер русского театра, как Евгений Вахтангов</p>
+            <div class="button__inner">
+            <button class="title__link link-margin--right">Карты</button>
+            <button class="title__link link-margin--right">Тур 360</button> 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+        <div class="modal-holder" id="modal7">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+            <div class="modal__map">
+            
+            <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo7zv9115e914pd0rc0nraq.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#17.78/43.324183/45.684852/-91.3/59" title="Basic" style="border:none;"></iframe>            </div>
+           
+            <div class="modal__info">
+            <h3 class="info__title">Национальная библиотека</h3>
+            <p class="info__subtitle">Национальная библиоте́ка Чече́нской Республики имени Абузара Айдамирова — первая публичная библиотека Грозного, основанная в 1904 году. В 1920 году была переведена на государственное финансирование, а в 1929 году, когда Грозный стал центром Чеченской автономной области, получила статус областной. В 2013 году по случаю 80-летия со дня рождения Народного писателя Чечни Абузара Айдамирова Национальной библиотеке было присвоено его имя.</p>
+            <div class="button__inner">
+            <button class="title__link link-margin--right">Карты</button>
+            <button class="title__link link-margin--right">Тур 360</button> 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <div class="footer__inner">
+                <h2 class="footer__logo">Vacation <br> Agency <span class="footer__dot">.</span></h2>
+                <div class="footer__links">
+                <a href="#" class="footer__link">Warranty</a>
+                <a href="#" class="footer__link">API / Technology used</a>
+                <a href="#" class="footer__link">Terms of Service</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
+                </div>
+                <span class="footer__license">© Vacation Agency 2021</span>
+            </div>  
+            </nav>
+            
+        </div>
+    </footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
