@@ -220,7 +220,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px, 1fr);
     grid-auto-rows: 400px;
-    margin: 20px;
     
 }
 
@@ -541,6 +540,10 @@ body {
 
     .nav__burger-menu {
         display: block;
+    }
+
+    .dots__grid {
+        margin: 20px;
     }
 
 }  
