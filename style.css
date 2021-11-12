@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -36,8 +31,6 @@ body {
     margin: 0 auto;
 }
 
-
-
 .header {
     min-width: 100vw;
     height: 100vh;
@@ -55,6 +48,7 @@ body {
     font-weight: 600;
     color: white;
     text-transform: uppercase;
+    margin-left: 20px;
 }
 
 .mountain1 {
@@ -194,17 +188,15 @@ body {
     
 }
 
-.dots__filter {
-    display: flex;
-    align-items: center;
-}
-
 .filter__inner {
-    margin: 32px 0;
+    margin: 20px 0px; 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .filter__link {
     font-size: 14px;
+    margin: 10px 0px 0px 5px;
     text-decoration: none;
     color: white;
     border: 2px solid white;
@@ -475,7 +467,21 @@ body {
         min-width: 140vw;
         height: 160%;
     }
-  }  
+  
+    .dots__title {
+        margin-left: 20px;
+    }
+
+    .filter__link {
+        margin: 10px 0px 0px 5px;
+    }
+
+    .filter__inner {
+        margin: 20px;
+    }
+
+
+}  
 
 @media (max-width: 400px) {
     .mountain3 {
