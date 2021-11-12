@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-html {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -331,7 +333,6 @@ body {
 }
 
 .footer {
-    display: none;
     color: white;
     height: 80vh;
     position: relative;
@@ -462,9 +463,43 @@ body {
     }
   }
 
-  @media (max-width: 800px) {
+@media (max-width: 800px) {
     .mountain3 {
         min-width: 100vw;
         height: 160%;
     }
-  }
+  }  
+
+@media (max-width: 500px) {
+    .mountain3 {
+        min-width: 140vw;
+        height: 160%;
+    }
+  }  
+
+@media (max-width: 400px) {
+    .mountain3 {
+        min-width: 160vw;
+        height: 155%;
+    }
+  }  
+
+@media (max-width: 350px) {
+    .mountain3 {
+        min-width: 180vw;
+        height: 160%;
+    }
+  }  
+
+
+  @media (max-height: 850px) {
+    .mountain3 {
+        height: 167%;
+    }
+  }  
+  
+  @media (max-height: 750px) {
+    .mountain3 {
+        height: 160%;
+    }
+  } 
