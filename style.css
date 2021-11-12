@@ -140,6 +140,41 @@ body {
 
 }
 
+.logo__inner {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__burger-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    background-color: white;
+    height: 2px;
+    width: 25px;
+}
+
+.nav__burger-menu {
+    position: relative;
+    display: none;
+    width: 30px;
+    background-color: white;
+    height: 2px;
+    width: 25px;
+    margin-right: 20px;
+}
+
+.nav__burger-menu::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    background-color: white;
+    height: 2px;
+    width: 25px;
+}
+
 .nav__dot {
     font-size: 40px;
 }
@@ -185,6 +220,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px, 1fr);
     grid-auto-rows: 400px;
+    margin: 20px;
     
 }
 
@@ -453,7 +489,30 @@ body {
         min-width: 100vw;
         height: 140%;
     }
-  }
+
+    .footer {
+        margin: 0px 20px;
+       
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 100px;
+    }
+
+    .footer__link {
+        margin: 5px;
+    }
+
+}
 
 @media (max-width: 800px) {
     .mountain3 {
@@ -472,14 +531,17 @@ body {
         margin-left: 20px;
     }
 
-    .filter__link {
-        margin: 10px 0px 0px 5px;
+    .nav__links {
+        display: none;
     }
 
-    .filter__inner {
-        margin: 20px;
+    .nav__inner {
+        justify-content: center;
     }
 
+    .nav__burger-menu {
+        display: block;
+    }
 
 }  
 
