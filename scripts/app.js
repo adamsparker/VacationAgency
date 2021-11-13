@@ -92,3 +92,13 @@ closeBtns.forEach(function(btn){
     };
 });
 
+
+var burgerBtn = document.querySelectorAll('.nav__burger-menu');
+
+burgerBtn.forEach(function(btn){
+      btn.onclick = function(){
+
+      document.getElementById('burger').style.display = "flex";
+    
+    };
+});   
