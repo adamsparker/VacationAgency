@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="style.css">
     <title>Vacation Agency</title>
 </head>
 <body>
     <header class="header">
-    <div class="container ">
+    <div class="container">
         <nav class="nav translate" data-speed="-0.99" id="navID">
             <div class="nav__inner">
-            <div class="logo__inner">
             <h2 class="nav__logo">Vacation <br> Agency <span class="nav__dot">.</span></h2>
-            <a href="#" class="nav__burger-menu" id="burger-button"></a>
-            <a href="#" class="nav__burger-close" id="burger-button--close">✕</a>
-            </div>
+            
             <div class="nav__links">
                 <a href="#"  class="nav__link">главная</a>
                 <a href="#dotsID" class="nav__link">точки</a>
@@ -30,18 +27,11 @@
     </div>
         <img src="images/mountain1.png" alt="" class="mountain1 translate" data-speed="-0.5">
         <img src="images/mountain2.png" alt="" class="mountain2 translate" data-speed="-0.5">
-        <img src="images/mountain3.png" alt="" class="mountain3">
+        <img src="images/mountain3.png" alt="" class="mountain3 translate" data-speed="-0.25">
         <div class="shadow" data-speed="1"></div>        
     </header>
 
     
-    <nav class="burger__nav" id="burger">
-        <a href="#" class="burger__link">главная</a>
-        <a href="#" class="burger__link">точки</a>
-        <a href="#" class="burger__link">команда</a>
-        <a href="#" class="burger__link">CHR</a>
-    </nav>
-
 
     <section class="dots" id="dotsID">
         <div class="container">
@@ -54,7 +44,6 @@
                 <a class="filter__link" onclick="filterSelection('museum')">Музеи</a>
                 <a class="filter__link" onclick="filterSelection('theatre')">Театры</a>
                 <a class="filter__link" onclick="filterSelection('parks')">Парки</a>
-                <a class="filter__link" onclick="filterSelection('parks')">Плейсхолдер</a>
             </div>
         </nav>
         <div class="dots__grid">
@@ -184,12 +173,12 @@
         <div class="modal__info">
             <h3 class="info__title">Сердце Чечни</h3>
             <p class="info__subtitle">Мечеть «Сердце Чечни» имени Ахмата Кадырова — мечеть в центре Грозного, одна из крупнейших в России и Европе. Строительство мечети было начато в апреле 2006 года и закончилось в октябре 2008 года</p>
-            <div class="button__inner">
+            <div class="button__inner modal-button__inner">
             <form action="https://www.google.com/maps/place/%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5+%D0%A7%D0%B5%D1%87%D0%BD%D0%B8/@43.3177125,45.6917396,17z/data=!3m1!4b1!4m5!3m4!1s0x4051d3e41e4f142d:0xb7b96b83453e05!8m2!3d43.3177086!4d45.6939283">
-                <button class="title__link">Карты</button>
+                <button class="title__link modal-title__link">Карты</button>
             </form>
             <form action="https://www.google.com/maps/@43.3180869,45.6940989,3a,75y,195.02h,105.01t/data=!3m8!1e1!3m6!1sAF1QipMA2cjBEj_UMafdW_l8FJ_VcHG4ZqncUSYdtlpk!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMA2cjBEj_UMafdW_l8FJ_VcHG4ZqncUSYdtlpk%3Dw203-h100-k-no-pi-0-ya139.27158-ro-0-fo100!7i9728!8i4860?">
-                <button class="title__link">Тур 360</button>
+                <button class="title__link modal-title__link">Тур 360</button>
             </form>
         </div>
         </div>

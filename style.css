@@ -16,12 +16,19 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+
+/** {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}*/
+
+
 body {
     position: relative;
     background-color: black;
     font-family: 'Poppins', sans-serif; 
     margin: 0;
-    min-width: 500px;
 }
 
 /* Container */
@@ -414,6 +421,7 @@ body {
     font-size: 10px;
 }
 
+
 .map {
     width: 100%;
     height: 100vh;
@@ -517,10 +525,38 @@ body {
 
 /*Медиа запросы*/
 
+@media (max-width: 1200px) { 
+    .modal {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .modal-content__inner {
+        flex-direction: column;
+    }
+
+    .modal__info {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+
+@media (max-height: 1370px) {
+    .mountain3 {
+        height: 170%;
+    }
+  } 
+
+
 @media (max-width: 1010px) {
     .mountain3 {
         min-width: 100vw;
-        height: 140%;
+        height: 10%;
     }
 
     .footer {
@@ -539,13 +575,33 @@ body {
         justify-content: center;
         flex-direction: column;
         margin: 100px;
+        text-align: center;
     }
 
     .footer__link {
         margin: 5px;
     }
 
+    .header__title {
+        font-size: 4.2rem;
+        line-height: 3.9rem;
+    }
+
+    .dots__title {
+        font-size: 4.2rem;
+        line-height: 3.9rem;
+    }
+
 }
+
+@media (max-height: 850px) {
+    .mountain3 {
+        height: 150%;
+    }
+  
+    
+}  
+
 
 @media (max-width: 800px) {
     .mountain3 {
@@ -564,6 +620,10 @@ body {
         
     }
 
+    .dots__title {
+        margin: 20px;
+    }
+
     .grid__img {
         margin: 10px;
     }
@@ -577,6 +637,27 @@ body {
         margin-top: 500px;
     }
 
+    .button__inner {
+        flex-direction: column;
+    }
+
+    .title__link {
+        margin-left: 10px;
+        padding: 5px 3px;
+    }
+
+    .modal-button__inner {
+        flex-direction: row;
+    }
+
+    .modal-title__link {
+        margin: 2px;
+    }    
+
+    .modal__info {
+        margin-top: 50px;
+    }
+
 }  
 
 
@@ -584,7 +665,7 @@ body {
 @media (max-width: 500px) {
     .mountain3 {
         min-width: 140vw;
-        height: 160%;
+        height: 165%;
     }
   
     .dots__title {
@@ -618,32 +699,97 @@ body {
         margin: 20px 20px;
     }
 
+    .title__link {
+        margin: 0px 10px 5px 10px;
+        padding: 5px 2px;
+    }
+
+    .modal-button__inner {
+        flex-direction: row;
+    }
+
+    .modal-title__link {
+        margin: 2px;
+    }    
+
+    .map {
+        width: 65rem;
+        height: 15rem;
+        margin-bottom: 0px;
+        margin: 0;
+    }
 
 }  
+
 
 @media (max-width: 400px) {
     .mountain3 {
         min-width: 160vw;
-        height: 155%;
+        height: 170%;
     }
-  }  
+    
+    .header__title {
+        font-size: 3.7rem;
+        line-height: 3.5rem;
+    }
+
+    .dots__title {
+        font-size: 3.7rem;
+        line-height: 3.5rem;
+    }
+
+    .modal__info {
+        margin-top: 30px;
+    }
+
+}  
 
 @media (max-width: 350px) {
     .mountain3 {
         min-width: 180vw;
-        height: 160%;
+        height: 165%;
     }
-  }  
 
-
-  @media (max-height: 850px) {
-    .mountain3 {
-        height: 167%;
+    .header__title {
+        font-size: 3.2rem;
+        line-height: 3rem;
     }
-  }  
+
+    .dots__title {
+        font-size: 3.2rem;
+        line-height: 3rem;
+    }
+
+    .modal__info {
+        margin-top: 0px;
+    }
+
+    .info__title {
+        font-size: 18px;
+    }   
+
+    .info__subtitle {
+        font-size: 11px;
+        margin: 10px 0;
+    }
+    
+}  
+
+@media (max-width: 300px) {
+
+    .header__title {
+        font-size: 2.7rem;
+        line-height: 2.5rem;
+    }
+
+    .dots__title {
+        font-size: 2.7rem;
+        line-height: 2.5rem;
+    }
+
+    
+
+}  
+ 
   
-  @media (max-height: 750px) {
-    .mountain3 {
-        height: 160%;
-    }
-  } 
+  
