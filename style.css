@@ -557,13 +557,29 @@ body {
         margin: 20px 20px;
     }
 
-    .logo__inner {
-        position: fixed;
-        top: 0;
-        z-index: 30;
+    .dots__grid {
+        display: block;
+        grid-template-columns: repeat(auto-fill, 400px, 1fr);
+        grid-auto-rows: 400px;
+        
+    }
+
+    .grid__img {
+        margin: 10px;
+    }
+
+    .tall {
+        grid-row: unset;
+    
+    }
+
+    .inner-tall {
+        margin-top: 500px;
     }
 
 }  
+
+
 
 @media (max-width: 500px) {
     .mountain3 {
@@ -575,6 +591,12 @@ body {
         margin-left: 20px;
     }
     
+    .logo__inner {
+        position: fixed;
+        top: 0;
+        z-index: 30;
+    }
+
 
     .nav__links {
         display: none;
