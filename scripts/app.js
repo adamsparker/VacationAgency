@@ -99,6 +99,20 @@ burgerBtn.forEach(function(btn){
       btn.onclick = function(){
 
       document.getElementById('burger').style.display = "flex";
+      document.getElementById('burger-button').style.display = "none";
+      document.getElementById('burger-button--close').style.display = "block";
+    
+    };
+});   
+
+var burgerBtn__close = document.querySelectorAll('.nav__burger-close');
+
+burgerBtn__close.forEach(function(btn){
+      btn.onclick = function(){
+
+      document.getElementById('burger').style.display = "none";
+      document.getElementById('burger-button').style.display = "block";
+      document.getElementById('burger-button--close').style.display = "none";
     
     };
 });   
