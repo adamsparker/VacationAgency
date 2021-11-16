@@ -55,7 +55,6 @@ body {
     font-weight: 600;
     color: white;
     text-transform: uppercase;
-    margin-left: 20px;
 }
 
 .mountain1 {
@@ -525,6 +524,13 @@ body {
 
 /*Медиа запросы*/
 
+@media (max-width: 1700px) {
+    .mountain3 {
+        height: 145%;
+    }
+}
+
+
 @media (max-width: 1200px) { 
     .modal {
         max-width: 100%;
@@ -543,20 +549,24 @@ body {
         margin: 0 auto;
     }
 
+    .mountain3 {
+        height: 150%;
+    }
+
 }
 
-
+/*
 @media (max-height: 1370px) {
     .mountain3 {
         height: 170%;
     }
   } 
-
+*/
 
 @media (max-width: 1010px) {
     .mountain3 {
         min-width: 100vw;
-        height: 10%;
+        height: 160%;
     }
 
     .footer {
@@ -585,11 +595,17 @@ body {
     .header__title {
         font-size: 4.2rem;
         line-height: 3.9rem;
+        margin-left: 20px;
     }
 
     .dots__title {
         font-size: 4.2rem;
         line-height: 3.9rem;
+        margin-left: 20px;
+    }
+    
+    .filter__inner {
+        margin-left: 20px;
     }
 
 }
@@ -599,14 +615,13 @@ body {
         height: 150%;
     }
   
-    
 }  
 
 
 @media (max-width: 800px) {
     .mountain3 {
         min-width: 100vw;
-        height: 160%;
+        height: 170%;
     }
     
     .filter__inner {
@@ -665,7 +680,7 @@ body {
 @media (max-width: 500px) {
     .mountain3 {
         min-width: 140vw;
-        height: 165%;
+        height: 170%;
     }
   
     .dots__title {
@@ -747,7 +762,7 @@ body {
 @media (max-width: 350px) {
     .mountain3 {
         min-width: 180vw;
-        height: 165%;
+        height: 175%;
     }
 
     .header__title {
