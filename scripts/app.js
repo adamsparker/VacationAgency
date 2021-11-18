@@ -74,7 +74,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-var modalBtns = document.querySelectorAll('.grid__img');
+var modalBtns = document.querySelectorAll('.modal-able');
 
 modalBtns.forEach(function(btn){
       btn.onclick = function(){
@@ -91,6 +91,15 @@ closeBtns.forEach(function(btn){
     var modal = (btn.closest(".modal-holder").style.display = "none");
     };
 });
+
+function test1() {
+  document.getElementById('modal1').style.display = "flex";
+}
+
+function test2() {
+  document.getElementById('modal1').style.display = "none";
+}
+
 
 
 var burgerBtn = document.querySelectorAll('.nav__burger-menu');
@@ -116,3 +125,70 @@ burgerBtn__close.forEach(function(btn){
     
     };
 });   
+
+var switchToSignup = document.querySelectorAll('.switch-to-signup');
+
+switchToSignup.forEach(function(btn){
+  btn.onclick = function(){
+
+      document.getElementById('modal-login').style.display = "none";
+      document.getElementById('modal-signup').style.display = "flex";
+      
+    
+    };
+});   
+
+var switchToLogin = document.querySelectorAll('.switch-to-login');
+
+switchToLogin.forEach(function(btn){
+  btn.onclick = function(){
+
+      document.getElementById('modal-signup').style.display = "none";
+      document.getElementById('modal-login').style.display = "flex";
+      
+    
+    };
+});   
+
+
+function search_dots() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('grid__img');
+    
+  for (i = 0; i < x.length; i++) { 
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display="none";
+      }
+      else {
+          x[i].style.display="list-item";                 
+      }
+  }
+}
+
+/*function get_location() {
+window.navigator.geolocation
+  .getCurrentPosition(console.log, console.log);
+  
+}
+*/
+function getLocation() {
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+      x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  const lat = position.coords.latitude;
+  const lng = position.coords.longitude;
+  pos = [lat,lng];
+  console.log(pos);
+
+  document.getElementById("location-button").setAttribute("value", pos);
+}
+
+function test(){
+  console.log("test");
+}

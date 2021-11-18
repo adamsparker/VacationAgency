@@ -9,6 +9,119 @@
     <title>Vacation Agency</title>
 </head>
 <body>
+
+
+    <div class="modal-holder" id="modal-block">
+        <div class="modal search-modal">
+        <a  class="modal__close">✖</a>
+       <div class="modal-content__inner">
+   
+        <form id="create__block__form">
+            <div class="modal__info auth-info">
+            <h3 class="info__title">Добавление точки</h3>
+            <div class="form__inner">
+            <input class="input__field form__input" id="create__block__title" type="text" name="" placeholder="Введите название">
+            <div class="button__inner">
+                <input type="file" class="button file-button file-input" id="dot-img">
+                <button onclick="getLocation()" type="button" class="button geo-button" id="location-button" >GPS</button>
+               <!-- <input type="text" class="url__holder" id="holder-id">   -->
+            </div>
+            <input class="input__field form__input" id="create__block__adress" type="text" name="" placeholder="Введите адрес">
+            <input class="input__field form__input" id="create__block__filter" type="text" name="" placeholder="Хэштеги через пробел">
+            <input class="input__field form__input" id="create__block__description" type="textarea" name="" placeholder="Описание">    
+            </div>
+            <input class="form__input_submit button " type="submit" name="" value="Создать">
+            </div>
+        </form>
+
+        </div>
+        </div>
+        </div>
+
+
+    <div class="modal-holder" id="modal-search">
+        <div class="modal search-modal">
+        <a  class="modal__close">✖</a>
+        <div class="modal-content__inner">
+        <h3 class="info__title">Что ищем?</h3>
+        <p class="info__subtitle warning-info">Введите ключевое слово и закройте окно</p>
+        <input class="input__field search__bar" id="searchbar" onkeyup="search_dots()" type="text" name="search" placeholder="Начните ввод">    
+        </div>
+        </div>
+        </div>
+
+        <div class="modal-holder" id="create-warning">
+        <div class="modal">
+        <a  class="modal__close">✖</a>
+        <div class="modal-content__inner">
+        <h3 class="info__title">Уважаемый пользователь</h3>
+        <p class="info__subtitle warning-info">Для добавления точек следует пройти авторизацию</p>
+    
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+
+        <div class="modal-holder" id="modal-signup">
+        <div class="modal">
+        <a  class="modal__close">✖</a>
+        <div class="modal-content__inner">
+       
+        <div class="modal__info auth-info">
+            <h3 class="info__title">Регистрация</h3>
+            <a href="#" class="auth-login"></a>
+            
+            <form class="form__inner" id="signup-form">
+                <div class="form__input">
+                    <input placeholder="Введите логин" class="input__field"type="login" id="signup-login" required />
+                </div>
+                <div class="form__input">
+                    <input placeholder="Введите почту" class="input__field"type="email" id="signup-email" required />
+
+                </div>
+                <div class="form__input">
+                    <input placeholder="Введите пароль" class="input__field" type="password" id="signup-password" required autocomplete="on"/>
+                </div>
+                <a class="form__link switch-to-login">У меня есть аккаунт</a>
+                <button class="button modal__close">Принять</button>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="modal-holder" id="modal-login">
+            <div class="modal">
+            <a  class="modal__close">✖</a>
+            <div class="modal-content__inner">
+           
+            <div class="modal__info auth-info">
+                <h3 class="info__title">Вход</h3>
+                <a href="#" class="auth-login"></a>
+                
+                <form class="form__inner" id="login-form">
+                    <div class="form__input">
+                        <input placeholder="Введите почту" class="input__field"type="email" id="login-email" required />
+                        
+                    </div>
+                    <div class="form__input">
+                        <input placeholder="Придумайте логин" class="input__field"type="login" id="login-login" required />
+                        
+                    </div>
+                    <div class="form__input">
+                        <input placeholder="Придумайте пароль" class="input__field"type="password" id="login-password" required autocomplete="on"/>
+                        
+                    </div>
+                    <a class="form__link switch-to-signup">У меня нет аккаунта</a>
+                    <button class="button modal__close">Принять</button>
+                </form>
+        </div>
+        </div>
+        </div>
+        </div>
+
     <header class="header">
     <div class="container">
         <nav class="nav translate" data-speed="-0.99" id="navID">
@@ -19,10 +132,13 @@
                     <a href="#" class="nav__burger-close" id="burger-button--close">✕</a>
                 </div>
             <div class="nav__links">
-                <a href="#"  class="nav__link">главная</a>
-                <a href="#dotsID" class="nav__link">точки</a>
-                <a href="#" onclick="myFunction()" class="nav__link">команда</a>
-                <a href="#" class="nav__link">CHR</a>
+               <!-- <div class="account-details"></div>-->
+                <a class="nav__link modal-able">главная</a>
+                <a class="nav__link modal-able">точки</a>
+                <a class="nav__link modal-able">команда</a>
+               
+                <a data-modal="modal-login" class="nav__link modal-able" id="loginbtn">аккаунт</a>
+                <a href="#" class="nav__link" id="logout">выйти</a>
             </div>
         </div>
         </nav>
@@ -37,13 +153,25 @@
     <nav class="burger__nav" id="burger">
         <a href="#" class="burger__link">главная</a>
         <a href="#" class="burger__link">точки</a>
-        <a href="#" class="burger__link">команда</a>
+        <a href="#"  class="burger__link">команда</a>
         <a href="#" class="burger__link">CHR</a>
     </nav>
 
     <section class="dots" id="dotsID">
         <div class="container">
+        <div class="dots__wrapper">
         <h2 class="dots__title">Точки :</h2>
+        <div data-modal="create-warning" class="dots__create modal-able" id="loginbtn">
+            <h3 class="create__icon">+</h3>
+        </div>
+        <div data-modal="modal-block" class="dots__create modal-able" id="logout">
+            <h3 class="create__icon">+</h3>
+        </div>
+        <div data-modal="modal-search" class="dots__create modal-able search-create" id="logout">
+            <h3 class="create__icon">⌕</h3>
+        </div>
+        </div>
+        
         <nav class="dots__filter">
             <div class="filter__inner" id="myBtnContainer">
                 <a class="filter__link filter-active" onclick="filterSelection('all')" >Все точки</a>
@@ -54,142 +182,22 @@
                 <a class="filter__link" onclick="filterSelection('parks')">Парки</a>
             </div>
         </nav>
+        
         <div class="dots__grid">
+            
+        </div>
+        </div>
+        </a>                                                                  
+            
 
-            <a data-modal="modal1" class="grid__img grozny wide" style="background: url(assets/1.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address">пр. имени Ахмат-Хаджи Кадырова</div>Мечеть "Сердце Чечни" имени Ахмата Кадырова</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal2" class="grid__img museum monument" style="background: url(assets/2.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-green"> 
-                    <div class="img__title"><div class="title__address">ул. Маяковского, 9 В</div>Музей Ахмат-Хаджи Кадырова</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal3" class="grid__img monument" style="background: url(assets/3.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-red"> 
-                    <div class="img__title"><div class="title__address">пр. Путина, 2</div>Памятник борцам революции</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal4" class="grid__img theatre" style="background: url(assets/4.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-purple"> 
-                    <div class="img__title"><div class="title__address">пр. имени Ахмат-Хаджи Кадырова</div>Театр им. Ханпаши Нурадилова</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal5" class="grid__img tall concert" style="background: url(assets/5.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-green"> 
-                    <div class="img__title inner-tall"><div class="title__address">ул. Чехова, 4</div>Филармония имени А. Шахбулатова</div>
-                    <div class="button__inner inner-tall">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal6" class="grid__img theatre monument" style="background: url(assets/6.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address">пр. Мохаммеда Али, 19</div>Театр им М. Лермонтова</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal7" class="grid__img grozny wide" style="background: url(assets/7.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address">ул. Г.А, ул. Германа Угрюмова, 75</div>Национальная библиотека Чеченской Республики им. А.А. Айдамирова</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a data-modal="modal8" class="grid__img museum" style="background: url(assets/8.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-red"> 
-                    <div class="img__title"><div class="title__address">пр. Путина, 1б</div>Национальный музей</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a class="grid__img concert" style="background: url(assets/9.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-green"> 
-                    <div class="img__title"><div class="title__address">Театральная площадь, 1/75</div>Театрально-концертный зал</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a class="grid__img parks tall" style="background: url(assets/10.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-green"> 
-                    <div class="img__title inner-tall"><div class="title__address">ул. Пролетарская 1а</div>Цветочный парк</div>
-                    <div class="button__inner inner-tall">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a class="grid__img parks" style="background: url(assets/11.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address">Театральная площадь, 1/75</div>Сквер журналистов</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
-            <a class="grid__img parks" style="background: url(assets/12.png) no-repeat center center / cover;">
-                <div class="img__overlay overlay-red"> 
-                    <div class="img__title"><div class="title__address">8-я Линия ул, 10</div>Парк имени Кадырова А.А</div>
-                    <div class="button__inner inner-short">
-                    <button class="title__link">Карты</button>
-                    <button class="title__link">Тур 360</button>
-                </div>
-                </div>
-            </a>
+            
         </div>
         </div>
     </section>
-
-    <div class="modal-holder" id="modal1">
-        <div class="modal">
-        <a  class="modal__close">✖</a>
-        <div class="modal-content__inner">
-        <div class="modal__map">
+ 
+    
         </div>
-       
-        <img src="/assets/1.png" alt="" class="modal__image">
-
-        <div class="modal__info">
-            <h3 class="info__title">Сердце Чечни</h3>
-            <p class="info__adress">пр. имени Ахмат-Хаджи Кадырова</p>
-            <div class="filter__inner" id="myBtnContainer">
-                <a class="filter__link hashtag-link">Хэштег</a>
-                <a class="filter__link hashtag-link">Ещё один Хэштег</a>
-            </div>
-            <p class="info__subtitle">Мечеть «Сердце Чечни» имени Ахмата Кадырова — мечеть в центре Грозного, одна из крупнейших в России и Европе. Строительство мечети было начато в апреле 2006 года и закончилось в октябре 2008 года</p>
-        </div>
-        </div>
-        </div>
-        </div>
-
+        
 
     <footer class="footer">
         <div class="container">
@@ -209,6 +217,49 @@
         </div>
     </footer>
 
-<script src="scripts/app.js"></script>
+
+    <!--//////////FireBase//////////-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyADe_yY_Ne9PvX57nmmBR3g4rwGBNedhIo",
+            authDomain: "data-labs-9e443.firebaseapp.com",
+            databaseURL: "https://data-labs-9e443.firebaseio.com",
+            projectId: "data-labs-9e443",
+            storageBucket: "data-labs-9e443.appspot.com",
+            messagingSenderId: "865927736252",
+            appId: "1:865927736252:web:643e83937cc41002bd19b9",
+            measurementId: "G-ZWJY58S0WB"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        
+        // Make auth and firestore reference
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // Update firestore settings
+        db.settings({ timestampsInSnapshots: true });   
+        firebase.analytics();
+    </script>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/dots-create.js"></script>
+
 </body>
 </html>

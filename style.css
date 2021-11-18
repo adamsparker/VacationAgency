@@ -5,6 +5,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+a {
+    cursor: pointer;
+}
+
+
+
 ::-webkit-scrollbar {
     display: none;
   }
@@ -216,10 +222,6 @@ body {
 }
 */
 
-.dots {
-    
-}
-
 .dots__title {
     display: inline;
     width: 900px;
@@ -232,6 +234,44 @@ body {
     text-transform: uppercase;
 }
 
+.dots__wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.dots__create {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding: 0px 20px 0 20px;
+    border-radius: 5px;
+    border: 1px white solid;
+    transition: .2s all;
+    margin: 0px 10px;
+}
+
+.search-create {
+    font-size: 40px;
+}
+
+.search-modal {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dots__create:active {
+    background-color: white;
+    color: black;
+}
+
+.dots__create:hover {
+    background-color: white;
+    color: black;
+    transition: .2s all;
+}
+
 .dots__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px, 1fr);
@@ -239,8 +279,14 @@ body {
     
 }
 
+.dots__inner {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+}
+
 .filter__inner {
-    margin: 20px 0px; 
+    margin: 10px 0px; 
     display: flex;
     flex-wrap: wrap;
 }
@@ -256,8 +302,13 @@ body {
     transition: all .2s;
 }
 
+.hashtag-inner {
+    margin: 0;
+}
+
 .hashtag-link {
     margin: 10px 5px 0px 0px;
+    font-size: 12px;
 }
 
 .filter__link:hover {
@@ -277,7 +328,6 @@ body {
     position: relative;
     margin: 5px;
     border-radius: 6px;
-    display: none;
 }
 
 .show {
@@ -340,7 +390,8 @@ body {
 
 .button__inner {
     display: flex;
-
+    align-items: center;
+    justify-content: space-between;
 }
 
 .title__link {
@@ -431,7 +482,7 @@ body {
 }
 
 .modal-holder {
-    display: flex;
+    display: none;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -468,8 +519,7 @@ body {
     display: flex;
     width: 100%;
     padding: 20px 30px 60px 30px;
-    text-align: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .modal__close {
@@ -479,31 +529,44 @@ body {
 }
 
 .modal__image {
-    max-width: 25vw;
+    margin-bottom: 10px;
+    max-width: 25em;
     border-radius: 10px;
     object-fit: cover;
 }
 
+.modal__info-wrapper {
+    display: flex;
+    
+}
+
 .modal__info {
-    max-width: 15vw;
+
     height: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     text-align: left;
-    margin-left: 20px;
     padding: 5px 0;
 }
+
+
 
 .info__title {
     font-size: 25px;
 }
 
 .info__subtitle {
+    text-align: justify;
+    max-width: 16em;
     font-size: 12px;
-    margin: 20px 0;
+    margin: 15px 0;
+}
+
+.warning-info {
+    max-width: 100%;
+    text-align: center;
 }
 
 .burger__nav {
@@ -528,6 +591,83 @@ body {
     color: white;
     text-decoration: none;
     font-size: 3em;
+}
+
+.form__inner {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__link {
+    margin: 20px 0 20px 0;
+}
+
+.input__field {
+    font-size: 14px;
+    color: white;
+    background: none;
+    padding: 10px;
+    margin: 10px;
+    border: 2px rgb(37, 37, 37) solid;
+    border-radius: 5px;
+}
+
+
+
+.file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 200px;
+    color: transparent;
+    
+}
+
+input[type='file'] {
+    color: transparent;
+    width: 125px;
+}
+
+.file-input::before {
+  cursor: pointer;
+  content: 'Фотография';
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  color: rgb(139 139 139);
+  background: none;
+  border-radius: 5px;
+  
+}
+
+
+.button {
+    cursor: pointer;
+    background: none;
+    margin-top: 10px;
+    color: rgb(139 139 139);
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px rgb(37, 37, 37) solid;
+    transition: .2s all;
+}
+
+.geo-button {
+    padding: 13.5px;
+    margin: 10px 0px 10px 10px;
+}
+
+.file-button {
+    margin: 10px 0 10px 0;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+    border: 2px rgb(255, 255, 255) solid;
+    transition: .2s all;
 }
 
 
@@ -614,7 +754,7 @@ body {
     }
     
     .filter__inner {
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
 }
