@@ -262,6 +262,18 @@ body {
     transition: all .2s;
 }
 
+.closed-link {
+    color: #757575;
+    border-color: #757575;
+}
+
+.closed-link:hover {
+    color: #000000;
+    border-color: #757575;
+    background-color: #757575;
+}
+
+
 .filter-active {
     color: black;
     background-color: white;
