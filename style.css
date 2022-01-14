@@ -693,7 +693,6 @@ body {
 
     .modal-title__link {
         cursor: pointer;
-        margin: 2px;
     }    
 
     .modal__info {
@@ -749,7 +748,8 @@ body {
     }
 
     .modal-title__link {
-        margin: 2px;
+        padding: 5px 55px;
+        margin-bottom: 10px;
     }    
 
     .map {
