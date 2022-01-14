@@ -9,6 +9,15 @@
     <title>Vacation Agency</title>
 </head>
 <body>
+
+    <div class="loader__wrapper" id="loader-wrapper">
+    <div class="loader">
+        <div class="logo__inner"></div>
+        <h2 class="loader-logo">Vacation <br> Agency <span class="nav__dot">.</span></h2>
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    </div>
+
     <header class="header">
     <div class="container">
         <nav class="nav translate" data-speed="-0.99" id="navID">
@@ -396,7 +405,7 @@
            
             <div class="modal__info">
             <h3 class="info__title">Национальная библиотека</h3>
-            <p class="info__subtitle">Национальная библиоте́ка Чече́нской Республики имени Абузара Айдамирова — первая публичная библиотека Грозного, основанная в 1904 году. В 1920 году была переведена на государственное финансирование, а в 1929 году, когда Грозный стал центром Чеченской автономной области, получила статус областной. В 2013 году по случаю 80-летия со дня рождения Народного писателя Чечни Абузара Айдамирова Национальной библиотеке было присвоено его имя.</p>
+            <p class="info__subtitle">Национальная библиоте́ка Чече́нской Республики имени Абузара Айдамирова — первая публичная библиотека Грозного, основанная в 1904 году. В 1920 году была переведена на государственное финансирование, а в 1929 году, когда Грозный стал центром Чеченской автономной области, получила статус областной.</p>
             <div class="button__inner">
             
             <button class="title__link link-margin--right">Тур 360</button> 
@@ -441,5 +450,22 @@
     </footer>
 
 <script src="scripts/app.js"></script>
+
+<script>
+
+            window.onload = function loadLoader() {
+            setTimeout(
+                function () {
+                    document.getElementById('loader-wrapper').style.opacity = '0';
+                }, 7000
+            );
+            setTimeout(
+                function () {
+                    document.getElementById('loader-wrapper').style.display = 'none';
+                }, 8000
+            );
+        }
+
+</script>
 </body>
 </html>
