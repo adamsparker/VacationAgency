@@ -326,12 +326,12 @@ body {
 
 .img__title {
     margin-top: 300px;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
 }
 
 .title__address {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .inner-short {
@@ -368,6 +368,8 @@ body {
     color: black;
     transition: all .2s;
 }
+
+
 
 .img__overlay:hover {
     opacity: 100%;
@@ -467,6 +469,18 @@ body {
     max-width: 55%;
     border-radius: 10px;
     background-color: rgb(0, 0, 0);
+}
+
+.vr-link {
+    color: #3f3f3f;
+    border-color: #363636;
+
+}
+
+.vr-link:hover {
+    color: #3f3f3f;
+    border-color: #363636;
+    background-color: black;
 }
 
 .modal-content__inner {
@@ -616,6 +630,10 @@ body {
         margin-left: 20px;
     }
 
+    .title__inner {
+        margin-left: 20px;
+    }
+
 }
 
 @media (max-height: 850px) {
@@ -664,6 +682,7 @@ body {
     }
 
     .title__link {
+        cursor: pointer;
         margin-left: 10px;
         padding: 5px 3px;
     }
@@ -673,6 +692,7 @@ body {
     }
 
     .modal-title__link {
+        cursor: pointer;
         margin: 2px;
     }    
 
