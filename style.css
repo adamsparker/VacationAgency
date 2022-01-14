@@ -216,10 +216,6 @@ body {
 }
 */
 
-.dots {
-    
-}
-
 .dots__title {
     display: inline;
     width: 900px;
@@ -611,9 +607,9 @@ body {
     }
 
     .dots__title {
-        font-size: 4.2rem;
+        font-size: 3.5rem;
         line-height: 3.9rem;
-        margin-left: 20px;
+     
     }
     
     .filter__inner {
@@ -648,7 +644,6 @@ body {
     }
 
     .dots__title {
-        margin: 20px;
     }
 
     .grid__img {
@@ -696,7 +691,6 @@ body {
     }
   
     .dots__title {
-        margin-left: 20px;
     }
     
     .logo__inner {
@@ -746,6 +740,10 @@ body {
         margin: 0;
     }
 
+    .dots__title {
+        font-size: 3rem;
+    }
+
 }  
 
 
@@ -761,8 +759,8 @@ body {
     }
 
     .dots__title {
-        font-size: 3.7rem;
-        line-height: 3.5rem;
+        font-size: 3rem;
+        line-height: 3.3rem;
     }
 
     .modal__info {
