@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="style.css">
-    <title>Vacation Agency</title>
+    <title>Малая Академия</title>
 </head>
 <body>
 
     <div class="loader__wrapper" id="loader-wrapper">
     <div class="loader">
         <div class="logo__inner"></div>
-        <h2 class="loader-logo">Vacation <br> Agency <span class="nav__dot">.</span></h2>
+        <h2 class="loader-logo" style="text-align: center;">Малая <br> Aкадемия </span></h2>
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
     </div>
@@ -23,19 +23,19 @@
         <nav class="nav translate" data-speed="-0.99" id="navID">
             <div class="nav__inner">
                 <div class="logo__inner">
-                    <h2 class="nav__logo">Vacation <br> Agency <span class="nav__dot">.</span></h2>
+                    <h2 class="nav__logo">Малая <br> Академия <span class="nav__dot">.</span></h2>
                     <a href="#" class="nav__burger-menu" id="burger-button"></a>
                     <a href="#" class="nav__burger-close" id="burger-button--close">✕</a>
                 </div>
             <div class="nav__links">
                 <a href="#"  class="nav__link">главная</a>
-                <a href="#dotsID" class="nav__link">точки</a>
-                <a href="#" onclick="myFunction()" class="nav__link">команда</a>
-                <a href="#" class="nav__link">CHR</a>
+                <a href="#dotsID" class="nav__link">Новости</a>
+                <a href="#" onclick="myFunction()" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link">Написать нам</a>
             </div>
         </div>
         </nav>
-        <h1 class="header__title translate" >Народное искусство и <br>культурное наследие</h1>
+        <h1 class="header__title translate" >портал <br> для школьников, <br> педагогов и <br> родителей</h1>
     </div>
         <img src="images/mountain1.png" alt="" class="mountain1 translate" data-speed="-0.5">
         <img src="images/mountain2.png" alt="" class="mountain2 translate" data-speed="-0.5">
@@ -53,59 +53,51 @@
     <section class="dots" id="dotsID">
         <div class="container">
             <div class="title__inner">
-        <h2 class="dots__title">Культурные <br> объекты:</h2>
+        <h2 class="dots__title">Изучай! Твори! Побеждай!</h2>
            </div>
         <nav class="dots__filter">
             <div class="filter__inner" id="myBtnContainer">
-                <a class="filter__link filter-active" onclick="filterSelection('all')" >Все точки</a>
-                <a class="filter__link" onclick="filterSelection('monument')">Памятники</a>
-                <a class="filter__link" onclick="filterSelection('museum')">Музеи</a>
-                <a class="filter__link" onclick="filterSelection('theatre')">Театры</a>
-                <a class="filter__link" onclick="filterSelection('parks')">Парки</a>
+                <a class="filter__link filter-active" onclick="filterSelection('all')" >Все новости</a>
+                <a class="filter__link" onclick="filterSelection('monument')">Конкурсы</a>
+                <a class="filter__link" onclick="filterSelection('museum')">Объявления</a>
+                <a class="filter__link" onclick="filterSelection('theatre')">Галерея</a>
             </div>
         </nav>
         <div class="dots__grid">
 
             <a data-modal="modal1" class="grid__img grozny wide" style="background: url(assets/1.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address">пр. имени Ахмат-Хаджи Кадырова</div>Мечеть "Сердце Чечни" имени Ахмата Кадырова</div>
+                    <div class="img__title"><div class="title__address"></div>Чемпионат Южного ГУ Банка России среди детских лагерей отдыха, приуроченного <br> ко Дню защиты детей на базе МБУ ДО «ЦРДЮТТ г. Грозного»</div>
                     <div class="button__inner inner-short">
-                    <button data-modal="modalVR" class="title__link">Виртуальная Реальность</button>
+                    <button data-modal="modalVR" class="title__link">Просмотреть</button>
                 </div>
                 </div>
             </a>
             <a data-modal="modal2" class="grid__img museum monument" style="background: url(assets/2.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-green"> 
-                    <div class="img__title"><div class="title__address">ул. Маяковского, 9 В</div>Музей Ахмат-Хаджи Кадырова</div>
+                    <div class="img__title"><div class="title__address"></div>Летняя профильная школа «Цифровое лето»</div>
                     <div class="button__inner inner-short">
-                    <button data-modal="modalVR" class="title__link">Виртуальная Реальность</button>
+                    <button data-modal="modalVR" class="title__link">Просмотреть</button>
                 </div>
                 </div>
             </a>
             <a data-modal="modal3" class="grid__img monument" style="background: url(assets/3.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-red"> 
-                    <div class="img__title"><div class="title__address">пр. Путина, 2</div>Памятник борцам революции</div>
+                    <div class="img__title"><div class="title__address"></div>Победа в чемпионате по Робототехнике</div>
                     <div class="button__inner inner-short">
-                    <button data-modal="modalVR" class="title__link">Виртуальная Реальность</button>
+                    <button data-modal="modalVR" class="title__link">Просмотреть</button>
                 </div>
                 </div>
             </a>
             <a data-modal="modal4" class="grid__img theatre" style="background: url(assets/4.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-purple"> 
-                    <div class="img__title"><div class="title__address">пр. имени Ахмат-Хаджи Кадырова</div>Театр им. Ханпаши Нурадилова</div>
+                    <div class="img__title"><div class="title__address"></div>Республиканский конкурс на лучший проект-презентацию "Здесь моя Родина"</div>
                     <div class="button__inner inner-short">
-                    <button data-modal="modalVR" class="title__link">Виртуальная Реальность</button>
+                    <button data-modal="modalVR" class="title__link">Просмотреть</button>
                 </div>
                 </div>
             </a>
-            <a data-modal="modal5" class="grid__img tall concert" style="background: url(assets/5.jpg) no-repeat center center / cover;">
-                <div class="img__overlay overlay-green"> 
-                    <div class="img__title inner-tall"><div class="title__address">ул. Чехова, 4</div>Филармония имени А. Шахбулатова</div>
-                    <div class="button__inner inner-tall">
-                    <button data-modal="modalVR" class="title__link">Виртуальная Реальность</button>
-                </div>
-                </div>
-            </a>
+           
             <a data-modal="modal6" class="grid__img theatre monument" style="background: url(assets/6.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-blue"> 
                     <div class="img__title"><div class="title__address">пр. Мохаммеда Али, 19</div>Театр им М. Лермонтова</div>
@@ -169,21 +161,21 @@
     <section class="dots" id="dotsID" style="margin-top: 100px;">
         <div class="container">
             <div class="title__inner" style="margin-left: 20px;">
-        <h2 class="dots__title">Народное <br> искусство:</h2>
+        <h2 class="dots__title">Фотогалерея:</h2>
             </div>
         <nav class="dots__filter">
             <div class="filter__inner" id="myBtnContainer">
-                <a class="filter__link filter-active" onclick="filterSelection('all')" >Всё искусство</a>
-                <a class="filter__link" onclick="filterSelection('monument')">Живопись</a>
-                <a class="filter__link" onclick="filterSelection('museum')">Скульптуры</a>
-                <a class="filter__link" onclick="filterSelection('theatre')">Национальная одежда</a>
+                <a class="filter__link filter-active" onclick="filterSelection('all')" >Всё лаборатории</a>
+                <a class="filter__link" onclick="filterSelection('monument')">Робо-лаборатория</a>
+                <a class="filter__link" onclick="filterSelection('museum')">"Волшебный Квиллинг"</a>
+                <a class="filter__link" onclick="filterSelection('theatre')">"Веб-лаборатория"</a>
             </div>
         </nav>
         <div class="dots__grid">
 
             <a data-modal="moda" class="grid__img grozny wide" style="background: url(assets/30.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address"></div>Сулейман Ахмадович Амаев. похищение луны</div>
+                    <div class="img__title"><div class="title__address"></div>Робо-лаборатория</div>
                     <div class="button__inner inner-short">
                   
                 </div>
@@ -191,7 +183,7 @@
             </a>
             <a data-modal="mod" class="grid__img museum monument" style="background: url(assets/31.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-green"> 
-                    <div class="img__title"><div class="title__address"></div>Сулейман Ахмадович Амаев.                </div>
+                    <div class="img__title"><div class="title__address"></div>Волшебный Квиллинг</div>
                     <div class="button__inner inner-short">
               
                 </div>
@@ -199,7 +191,7 @@
             </a>
             <a data-modal="mod" class="grid__img monument" style="background: url(assets/32.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-red"> 
-                    <div class="img__title"><div class="title__address"></div>Сулейман Ахмадович Амаев. Орлиный край
+                    <div class="img__title"><div class="title__address"></div>Лаборатория «Архитектура и дизайн»
                 </div>
                     <div class="button__inner inner-short">
                    
@@ -208,7 +200,7 @@
             </a>
             <a data-modal="mod" class="grid__img theatre" style="background: url(assets/33.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-purple"> 
-                    <div class="img__title"><div class="title__address"></div>Х.А.Автиев. Башни</div>
+                    <div class="img__title"><div class="title__address"></div>Цифровая лаборатория</div>
                     <div class="button__inner inner-short">
                   
                 </div>
@@ -216,7 +208,7 @@
             </a>
             <a data-modal="mod" class="grid__img tall concert" style="background: url(assets/37.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-green"> 
-                    <div class="img__title inner-tall"><div class="title__address"></div>Айнди Шамилов. Осень в горах</div>
+                    <div class="img__title inner-tall"><div class="title__address"></div>Робо-лаборатория</div>
                     <div class="button__inner inner-tall">
                    
                 </div>
@@ -224,7 +216,7 @@
             </a>
             <a data-modal="mod" class="grid__img theatre monument" style="background: url(assets/34.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address"></div>Ризван Алхазов. В ночной тиши</div>
+                    <div class="img__title"><div class="title__address"></div>Цифровая лаборатория.</div>
                     <div class="button__inner inner-short">
                   
                 </div>
@@ -232,7 +224,7 @@
             </a>
             <a data-modal="mod" class="grid__img grozny wide" style="background: url(assets/35.jpg) no-repeat center center / cover;">
                 <div class="img__overlay overlay-blue"> 
-                    <div class="img__title"><div class="title__address"></div>Айнди Шамилов. Водопад на окраине с.Харачой</div>
+                    <div class="img__title"><div class="title__address"></div>Цифровая лаборатория</div>
                     <div class="button__inner inner-short">
                    
                 </div>
@@ -249,18 +241,18 @@
         <div class="modal-content__inner">
         <div class="modal__map">
         
-            <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo252ho0zqk14pd05nyd0n1.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#16.74/43.317784/45.693962/0/37" title="Basic" style="border:none;"></iframe>
         
         </div>
        
         <div class="modal__info">
-            <h3 class="info__title">Сердце Чечни</h3>
-            <p class="info__subtitle">Мечеть «Сердце Чечни» имени Ахмата Кадырова — мечеть в центре Грозного, одна из крупнейших в России и Европе. Строительство мечети было начато в апреле 2006 года и закончилось в октябре 2008 года</p>
+            <h3 class="info__title">«ДОЛ-игра»</h3>
+            <p class="info__subtitle">В рамках проекта  «ДОЛ-игра»: «Финансовые ребусы», «Мои финансы», «Финансовая безопасность», «Финансики», «Отчаянные домохозяйства», проводились занятия с использованием игрового контента по повышению финансовой грамотности разного формата и продолжительности. Участники игр познакомились с источниками расходов, доходов, узнали представление о планировании бюджета; познакомились с основными понятиями, систематизировали существующие знания; познакомились с основными особенностями поведения финансовых пирамид через погружение в предметный материал в игровой форме. Обучение в игре позволяет получить опыт, необходимый для реальной жизни, повысить уровень финансовой грамотности, а также сформировать интерес к финансово грамотному поведению.
+                Такие мероприятия помогут внедрению элементов финансовой грамотности в образовательный процесс.</p>
             <div class="button__inner modal-button__inner">
           
             <form action="https://www.google.com/maps/@43.3180869,45.6940989,3a,75y,195.02h,105.01t/data=!3m8!1e1!3m6!1sAF1QipMA2cjBEj_UMafdW_l8FJ_VcHG4ZqncUSYdtlpk!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMA2cjBEj_UMafdW_l8FJ_VcHG4ZqncUSYdtlpk%3Dw203-h100-k-no-pi-0-ya139.27158-ro-0-fo100!7i9728!8i4860?">
-                <button class="title__link modal-title__link">Тур 360</button>
-                <button data-modal="modal1" class="title__link vr-link">Виртуальная Реальность</button>
+                <button class="title__link modal-title__link">Закладки</button>
+                <button data-modal="modal1" class="title__link vr-link">Виртуальный тур</button>
             </form>
             
         </div>
@@ -273,19 +265,16 @@
             <div class="modal">
             <a  class="modal__close">✖</a>
             <div class="modal-content__inner">
-            <div class="modal__map">
-            
-                <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo5mcb8duoc15o8l0ew86pa.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#16.45/43.326151/45.678809/0/52" title="Basic" style="border:none;"></iframe>
-            
+            <div class="modal__map">            
             </div>
            
             <div class="modal__info">
-            <h3 class="info__title">Музей Ахмат-Хаджи Кадырова</h3>
-            <p class="info__subtitle">Мемориальный комплекс Славы имени Ахмата Абдулхамидовича Кадырова — мемориал, посвящённый Победе в Великой Отечественной войне, а также первому Президенту Чеченской Республики Ахмату Кадырову. Комплекс расположен в центре города Грозного на улице Маяковского. В составе мемориала — музей, парк, ряд памятников.</p>
+            <h3 class="info__title">Летняя профильная школа «Цифровое лето»</h3>
+            <p class="info__subtitle">Большую роль играет химия в развитии фармацевтической промышленности: основную часть всех лекарственных препаратов получают синтетическим путем. Благодаря химии совершены многие перевороты в медицине. Исключительно большое значение химия имеет в сельском хозяйстве.</p>
             <div class="button__inner">
          
             <form action="https://www.google.com/maps/@43.3269785,45.6795263,3a,75y,222.01h,99.83t/data=!3m8!1e1!3m6!1sAF1QipPWHZYXKyqQJeVhvgRRH7BoZiBfIzGLPbC5-41b!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPWHZYXKyqQJeVhvgRRH7BoZiBfIzGLPbC5-41b%3Dw203-h100-k-no-pi-0-ya271.94598-ro0-fo100!7i6144!8i3072">
-                <button class="title__link">Тур 360</button>
+                <button class="title__link">Закладки</button>
                 <button data-modal="modal1" class="title__link vr-link">Виртуальная Реальность</button>
 
             </form>
@@ -301,17 +290,15 @@
             <div class="modal-content__inner">
             <div class="modal__map">
             
-                <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo5xsuq13n214qw610uahvw.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#17.76/43.323894/45.678686/11.2/67" title="Basic" style="border:none;"></iframe>            
-            
             </div>
            
             <div class="modal__info">
-            <h3 class="info__title">Памятник борцам революции</h3>
-            <p class="info__subtitle">Монумент расположен в городе Грозном на площади Дружбы Народов. Памятник трёхфигурный. Фигуры выполнены в полный рост из блоков серого гранита Корнинского месторождения (Житомирская область, Украинская ССР, СССР). От грудной области и далее вниз фигуры слиты и не детализированы.</p>
+            <h3 class="info__title">Победа в чемпионате СКФО по Робототехнике</h3>
+            <p class="info__subtitle">Воспитанники Центра развития детского (юношеского) технического творчества нашли свои оригинальные конструкторские решения и достойно продемонстрировали возможности своих роботов. Так, в номинации «Чертёжник» Сулим Дангириев стал победителем, а Адлан Астамиров занял заслуженное второе место. На фестиваль ребята привезли уже готовых роботов. Собирали сами, а программы управления взяли готовые. В соревновании «Чертежник» робот, реагируя на команды «водителя», должен был нарисовать геометрические фигуры. При этом робот был лишён каких-либо датчиков (за исключением энкодера, отслеживающего угол поворота колёс).</p>
             <div class="button__inner">
             
             <form action="https://www.google.com/maps/@43.3246608,45.679673,3a,43.4y,242.46h,94.43t/data=!3m7!1e1!3m5!1shWlNavSDgtdsrRmlYWdzBg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DhWlNavSDgtdsrRmlYWdzBg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D339.7795%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?">
-                <button class="title__link">Тур 360</button>
+                <button class="title__link">Закладки</button>
                 <button data-modal="modal1" class="title__link vr-link">Виртуальная Реальность</button>
 
             </form>
@@ -327,17 +314,32 @@
             <div class="modal-content__inner">
             <div class="modal__map">
             
-                <iframe class="map" src="https://api.mapbox.com/styles/v1/parkeradams/ckvo6nllpoup814o8pia9q8j2.html?title=false&access_token=pk.eyJ1IjoicGFya2VyYWRhbXMiLCJhIjoiY2t2bzFtcjJtMDlxczJ2a2dzbm16cDkybSJ9.jVv2Btkawt6rrSJtAKx0EQ&zoomwheel=false#17.85/43.320664/45.689531/0/54" title="Basic" style="border:none;"></iframe>
             
             </div>
            
             <div class="modal__info">
-            <h3 class="info__title">Театр им. Ханпаши Нурадилова</h3>
-            <p class="info__subtitle">Чеченский государственный драматический театр им. Ханпаши Нурадилова официально открылся 1 мая 1931 года как театральная студия. На деле работать он начал несколько раньше. Основателем и первым директором театра был Абдурахман Авторханов</p>
+            <h3 class="info__title">Республиканский конкурс на лучший проект-презентацию "Здесь моя Родина", посвящённый ко Дню народного единства.</h3>
+            <p class="info__subtitle">
+                По итогам конкурса учащиеся Центра развития детского (юношеского) технического творчества Грозного стали победителями и призерами сразу во всех номинациях: <br> 
+                
+                <br> Номинация "2D компьютерная анимация":
+                <br> I место - Марха Хаджимуратова
+                <br> II место - Иман Оздомирова
+                <br>
+                <br> Номинация "3D компьютерная графика":
+                <br> I место - Дени Такаев
+                <br> III место - Абдул-Малик Абубакаров
+                <br>
+                <br> Номинация "Электронная карта":
+               <br> I место - Иман Эдисултанова
+                <br> II место - Мансур Хатаев, Абдуллах Хатаев и Магомед Мукаев
+                <br> III место - Магомед Хасаев
+                <br>
+
             <div class="button__inner">
           
             <form action="https://www.google.com/maps/@43.3210078,45.6891889,3a,75y,193.27h,104.52t/data=!3m8!1e1!3m6!1sAF1QipOIxQReSw4v_TKWhqdkoNGyaxB85emBBJ12QQA8!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOIxQReSw4v_TKWhqdkoNGyaxB85emBBJ12QQA8%3Dw203-h100-k-no-pi-0-ya199.10419-ro-0-fo100!7i9728!8i4864?">
-                <button class="title__link">Тур 360</button>
+                <button class="title__link">Закладки</button>
                 <button data-modal="modal1" class="title__link vr-link">Виртуальная Реальность</button>
 
             </form>
@@ -435,14 +437,14 @@
         <div class="container">
             <nav class="footer__nav">
                 <div class="footer__inner">
-                <h2 class="footer__logo">Vacation <br> Agency <span class="footer__dot">.</span></h2>
+                <h2 class="footer__logo">Малая <br> Академия <span class="footer__dot">.</span></h2>
                 <div class="footer__links">
                 <a href="#" class="footer__link">Warranty</a>
                 <a href="#" class="footer__link">API / Technology used</a>
                 <a href="#" class="footer__link">Terms of Service</a>
                 <a href="#" class="footer__link">Privacy Policy</a>
                 </div>
-                <span class="footer__license">© Vacation Agency 2021</span>
+                <span class="footer__license">© ЦРДЮТТ 2022</span>
             </div>  
             </nav>
             
